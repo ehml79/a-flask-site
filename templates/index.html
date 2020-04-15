@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta charset='utf-8'>
+	<title>flask app</title>
+</head>
+<body>
+	这是模版<br>
+	这是首页<br>
+
+	{# 这是注释 #}
+	{{ url_str }}<br>
+
+	{# 列表的使用 #}
+
+	{{ my_list }}<br>
+	{{ my_list.2 }}<br>
+	{{ my_list[3] }}<br>
+	
+	{# 字典的使用 #}
+	{{ my_dict }}<br>
+	{{ my_dict.name }}<br>
+	{{ my_dict['url'] }}<br>
+
+	{{ my_int }}<br>
+
+<hr>
+
+	{# 控制代码块 #}
+	{# for循环的使用 #}
+	{% for num in my_list %}
+		{# 数据大于3，才能显示 #}
+		{# if 的使用 #}
+		{% if num > 3 %}
+			{{ num }}<br>
+		{% endif %}
+	{% endfor %}
+
+<hr>
+
+	{# 过滤器#}
+	{{ url_str | upper }}<br>
+	{{ url_str | reverse }}<br>
+	{{ url_str | reverse | upper | lower  | reverse }}<br>
+
+
+</body>
+</html>
