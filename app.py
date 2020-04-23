@@ -22,7 +22,7 @@ app.secret_key = 'testkey'
 
 
 # 配置数据库地址
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://flask:password@192.168.217.128:3306/flask'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://flask:password@192.168.217.128:3306/flask?charset=utf8mb4'
 # 动态跟踪数据的修改，不建议开启，消耗性能
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
